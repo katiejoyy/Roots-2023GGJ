@@ -1,0 +1,12 @@
+{
+	"nodes": [
+		{
+			"speaker": "",
+			"nodeName": "Begin",
+			"dialogueText": "No more firewood to collect, huh? Guess I'll just go cold.",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["black"]
+		}
+	]
+}

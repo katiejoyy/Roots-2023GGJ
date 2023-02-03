@@ -45,12 +45,12 @@ public class InputManager : MonoBehaviour
 	* call mapped command on UI focus
 	*/
 
-	readonly string HORIZONTAL_AXIS_INPUT_STRING = "Horizontal";
-	readonly string VERTICAL_AXIS_INPUT_STRING = "Vertical";
-	readonly string ACTION_CONFIRM_INPUT_STRING = "Submit";
-	readonly string ACTION_CANCEL_INPUT_STRING = "Cancel";
-	readonly string ACTION_MENU_INPUT_STRING = "Jump";
-	readonly string SECRET_DEBUG_ACTION_STRING = "Fire1";
+	public string HORIZONTAL_AXIS_INPUT_STRING = "Horizontal";
+	public string VERTICAL_AXIS_INPUT_STRING = "Vertical";
+	public string ACTION_CONFIRM_INPUT_STRING = "Submit";
+	public string ACTION_CANCEL_INPUT_STRING = "Cancel";
+	public string ACTION_MENU_INPUT_STRING = "Jump";
+	public string SECRET_DEBUG_ACTION_STRING = "Fire1";
 	//readonly string SHOOT_HORIZONTAL_AXIS_INPUT_STRING = "ShootHorizontal";
 	//readonly string SHOOT_VERTICAL_AXIS_INPUT_STRING = "ShootVertical";
 
@@ -93,7 +93,7 @@ public class InputManager : MonoBehaviour
 			}
 		}
 
-        if(currentInputFocus.Count <= 0)
+        if(currentInputFocus is null || currentInputFocus.Count <= 0)
         {
             return;
         }
@@ -326,6 +326,9 @@ public class InputManager : MonoBehaviour
 	private bool CheckButtonsHeld(ref List<Command> commandsThisFrame)
 	{
 		bool handled = false;
+
+		if(holdingMap is null)
+			return handled;
 
 		if (holdingMap.Contains(ACTION_CONFIRM_INPUT_STRING))
 		{

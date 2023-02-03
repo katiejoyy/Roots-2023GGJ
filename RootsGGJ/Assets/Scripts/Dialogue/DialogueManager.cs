@@ -117,15 +117,15 @@ public class DialogueManager : MonoBehaviour
 
     private void endDialogue()
     {
-        currentDialogueNode.Speaker = "";
-        currentDialogueNode.NodeName = "";
-        currentDialogueNode.DialogueText = "";
-        currentDialogueNode.NextNodes.Clear();
-        currentDialogueNode.OptionDialogueText.Clear();
+        // currentDialogueNode.Speaker = "";
+        // currentDialogueNode.NodeName = "";
+        // currentDialogueNode.DialogueText = "";
+        // currentDialogueNode.NextNodes.Clear();
+        // currentDialogueNode.OptionDialogueText.Clear();
 
-        previousDialogueNode = currentDialogueNode;
+        // previousDialogueNode = currentDialogueNode;
 
-        currentDialogue = null;
+        // currentDialogue = null;
 
         //Then hide the dialogueUI? Delete it?
         inputManager.GetComponent<InputManager>().RelinquishInputFocus(dialogueUI.GetComponent<Dialogue>());

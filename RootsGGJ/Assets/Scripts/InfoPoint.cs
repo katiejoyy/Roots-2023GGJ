@@ -1,23 +1,46 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InfoPoint : MonoBehaviour
 {
-	Conversation conversation;
-	public TextAsset conversation_text;
+	public PlayerInventory _inventory;
+
+	Conversation _preCollectConversation;
+	Conversation _postCollectConversation;
+	public TextAsset preCollectConversationText;
+	public TextAsset postCollectConversationText;
 
     void Start ()
 	{
-        conversation = new Conversation
+        _preCollectConversation = CreateConversation(preCollectConversationText);
+        _postCollectConversation = CreateConversation(postCollectConversationText);
+		_preCollectConversation.onConversationComplete += CompletedConversation;
+	}
+
+	private static Conversation CreateConversation(TextAsset conversationText)
+	{
+		Conversation conversation = new Conversation
 		{
 			dialogueManager = FindObjectOfType<DialogueManager>().gameObject
 		};
-		conversation.LoadConversation(conversation_text);
+		conversation.LoadConversation(conversationText);
+
+		return conversation;
 	}
 
 	public void BeginConversation()
 	{
-		conversation.beginConversation();
+		if(!_inventory.Has(ITEMS.FIREWOOD))
+		{
+			_preCollectConversation.beginConversation();
+			return;
+		}
+
+		_postCollectConversation.beginConversation();
+	}
+
+	public void CompletedConversation() 
+	{
+		_inventory.Collect(ITEMS.FIREWOOD);
+		Debug.Log("Collected the firewood!");
 	}
 }

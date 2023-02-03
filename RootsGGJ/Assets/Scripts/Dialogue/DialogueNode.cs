@@ -45,6 +45,16 @@ public class DialogueNode
         NodeTags = tags;
     }
 
+    public DialogueNode(DialogueNode toCopy)
+    {
+        Speaker = toCopy.Speaker;
+        NodeName = toCopy.NodeName;
+        DialogueText = toCopy.DialogueText;
+        NextNodes = toCopy.NextNodes;
+        OptionDialogueText = toCopy.OptionDialogueText;
+        NodeTags = toCopy.NodeTags;
+    }
+
     public string Speaker
     {
         get

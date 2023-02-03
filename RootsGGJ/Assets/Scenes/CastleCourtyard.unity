@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316283783}
   - component: {fileID: 316283784}
+  - component: {fileID: 316283785}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,6 +166,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e30d0a3a6dfb934aadb88509d8a19c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneCamera: {fileID: 963194227}
+--- !u!114 &316283785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316283782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65740b42f997da849befd420935ee4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &602401620 stripped
@@ -631,6 +645,18 @@ PrefabInstance:
       propertyPath: defaultActorSource
       value: 
       objectReference: {fileID: 316283782}
+    - target: {fileID: 705452816336468777, guid: 89eb528721dabf846bdfd397b7e94ac6, type: 3}
+      propertyPath: ACTION_MENU_INPUT_STRING
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 705452816336468777, guid: 89eb528721dabf846bdfd397b7e94ac6, type: 3}
+      propertyPath: SECRET_DEBUG_ACTION_STRING
+      value: Fire3
+      objectReference: {fileID: 0}
+    - target: {fileID: 705452816336468777, guid: 89eb528721dabf846bdfd397b7e94ac6, type: 3}
+      propertyPath: ACTION_CONFIRM_INPUT_STRING
+      value: Fire1
+      objectReference: {fileID: 0}
     - target: {fileID: 705452816336468778, guid: 89eb528721dabf846bdfd397b7e94ac6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -741,6 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68304a4aabce9245ae429b76a592022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventory: {fileID: 316283785}
   conversation_text: {fileID: 4900000, guid: 96c6a35d7231af641aa6b929cb4d4302, type: 3}
 --- !u!114 &1532783615
 MonoBehaviour:
