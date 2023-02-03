@@ -1,0 +1,36 @@
+{
+	"nodes": [ 
+		{
+			"speaker": "Arlisle",
+			"nodeName": "Begin",
+			"dialogueText": "You got this pal. :D",
+			"nextNodes": ["May"],
+			"optionDialogueText": [],
+			"nodeTags": ["pink"]
+		},
+		{
+			"speaker": "May",
+			"nodeName": "May",
+			"dialogueText": "There's a lot out there, dork. Better get moving! :P",
+			"nextNodes": ["LeSenn"],
+			"optionDialogueText": [],
+			"nodeTags": ["yellow"]
+		},
+		{
+			"speaker": "LeSenn",
+			"nodeName": "LeSenn",
+			"dialogueText": "We believe in you, buddy. ;)",
+			"nextNodes": ["Dang"],
+			"optionDialogueText": [],
+			"nodeTags": ["blue"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Dang",
+			"dialogueText": "I didn't realize any of this was out here...",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		}
+	]
+}

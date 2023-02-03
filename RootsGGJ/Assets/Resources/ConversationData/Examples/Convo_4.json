@@ -1,0 +1,36 @@
+{
+	"nodes": [ 
+		{
+			"speaker": "LeSenn",
+			"nodeName": "Begin",
+			"dialogueText": "Hey buddy. Shoot for the stars. But take care of yourself, okay? ;)",
+			"nextNodes": ["LeSenn"],
+			"optionDialogueText": [],
+			"nodeTags": ["blue"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "LeSenn",
+			"dialogueText": "LeSenn is amazing. They always inspire me to try to be better.",
+			"nextNodes": ["Time"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Time",
+			"dialogueText": "We don't get to talk much, but we always remind each other to stay healthy.",
+			"nextNodes": ["Amazing"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Amazing",
+			"dialogueText": "I'm so glad we got to meet. There are so many amazing things in here.",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"nodes": [ 
+		{
+			"speaker": "May",
+			"nodeName": "Begin",
+			"dialogueText": "Heya! Let's hangout some time, dork. :P",
+			"nextNodes": ["May"],
+			"optionDialogueText": [],
+			"nodeTags": ["yellow"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "May",
+			"dialogueText": "May can sound mean. But they're always around if I ask.",
+			"nextNodes": ["Cool"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Cool",
+			"dialogueText": "And they take me to some really cool places!",
+			"nextNodes": ["Never"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Never",
+			"dialogueText": "I never used to go anywhere...",
+			"nextNodes": ["Nice"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Nice",
+			"dialogueText": "It's nice.",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		}
+	]
+}

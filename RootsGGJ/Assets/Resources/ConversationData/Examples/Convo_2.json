@@ -1,0 +1,36 @@
+{
+	"nodes": [ 
+		{
+			"speaker": "Arlisle",
+			"nodeName": "Begin",
+			"dialogueText": "Hey what's up, pal? It's good to see you. :D",
+			"nextNodes": ["Arlisle"],
+			"optionDialogueText": [],
+			"nodeTags": ["pink"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Arlisle",
+			"dialogueText": "Arlisle seems so nice. We have so much in common.",
+			"nextNodes": ["Hard"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Hard",
+			"dialogueText": "It's hard to talk at first. But...it's fun too.",
+			"nextNodes": ["Scared"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		},
+		{
+			"speaker": "Arbie",
+			"nodeName": "Scared",
+			"dialogueText": "I hope I don't let Arlisle down...",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["green"]
+		}
+	]
+}

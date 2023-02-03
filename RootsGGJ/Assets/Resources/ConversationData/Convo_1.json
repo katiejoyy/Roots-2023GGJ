@@ -1,0 +1,28 @@
+{
+	"nodes": [
+		{
+			"speaker": "",
+			"nodeName": "Begin",
+			"dialogueText": "*anime protaganist voice* I've finally made it to the castle...",
+			"nextNodes": [ "Second" ],
+			"optionDialogueText": [],
+			"nodeTags": [ "black" ]
+		},
+		{
+			"speaker": "",
+			"nodeName": "Second",
+			"dialogueText": "Maybe I can find out what those black tendrils are that have been choking the land.",
+			"nextNodes": ["Third"],
+			"optionDialogueText": [],
+			"nodeTags": ["black"]
+		},
+		{
+			"speaker": "",
+			"nodeName": "Third",
+			"dialogueText": "Hmm. The doors are locked. Let me take a look around.",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["black"]
+		}
+	]
+}
