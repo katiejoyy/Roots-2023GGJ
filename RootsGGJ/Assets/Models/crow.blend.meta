@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 6f88041f03ea7de4f90ca0cadca0b32b
+guid: b2ca5e139b8a23c4da8a3d6155abcd84
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Feathers
+    second: {fileID: 2100000, guid: c6952336717f9b640b638bf9cf6653f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

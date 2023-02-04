@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InfoPoint : MonoBehaviour
+public class FirewoodConversationController : MonoBehaviour, ConversationController
 {
 	public PlayerInventory _inventory;
 

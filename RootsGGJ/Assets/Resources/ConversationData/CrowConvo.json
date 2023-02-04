@@ -1,0 +1,28 @@
+{
+	"nodes": [
+		{
+			"speaker": "",
+			"nodeName": "Begin",
+			"dialogueText": "Hey up there, do you think you could tell me how to get in?",
+			"nextNodes": ["crow"],
+			"optionDialogueText": [],
+			"nodeTags": ["black"]
+		},
+		{
+			"speaker": "Crow",
+			"nodeName": "crow",
+			"dialogueText": "NEVERMORE!!!",
+			"nextNodes": ["fin"],
+			"optionDialogueText": [],
+			"nodeTags": ["blue"]
+		},
+		{
+			"speaker": "",
+			"nodeName": "fin",
+			"dialogueText": "Ah...of course.",
+			"nextNodes": ["END"],
+			"optionDialogueText": [],
+			"nodeTags": ["black"]
+		}
+	]
+}

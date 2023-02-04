@@ -6,27 +6,29 @@ public class PlayerInteract : Actor
     private Vector3? targetPosition = null;
     private Vector3 startPosition;
     public float speed = 0.1f;
-    public float time = 0;
+    public float progress = 0;
 
     public void Update() {
         if(targetPosition.HasValue){
+            progress += (speed * Time.deltaTime);
+            float time = progress / Vector3.Distance(startPosition, targetPosition.Value);
             transform.position = Vector3.Lerp(startPosition,targetPosition.Value,time);
-            time = time + (speed * Time.deltaTime);
+            
             if (time >= 1){
                 targetPosition = null;
-                time = 0;
+                progress = 0;
                 return;
             }
+
             RaycastHit hit;
             Vector3 direction = targetPosition.Value - transform.position;
             direction.Normalize();
-            if (Physics.Raycast(transform.position,direction,out hit, 2.0f)){
+            if (Physics.Raycast(transform.position,direction,out hit, 1.0f)){
                 GameObject hitObject = hit.collider.gameObject;
                 if (hitObject.gameObject.tag != "Ground")
                 {
-                 targetPosition = null;  
+                    targetPosition = null;
                 }
-
             }
             
         }
@@ -46,15 +48,13 @@ public class PlayerInteract : Actor
             }
             if (hitObject.tag == "Ground"){
                 startPosition = transform.position;
-                time = 0;
+                progress = 0;
                 targetPosition = new Vector3(hit.point.x,transform.position.y,hit.point.z);
             }
         }
     }
-     private void OnCollisionEnter(Collision other) 
+    private void OnCollisionEnter(Collision other) 
     {
-      
-        Debug.Log("hit");
-        
+        targetPosition = null;
     }
 }
